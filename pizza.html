@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Spankey's Online Pizza Cafe</title>
 </head>
 <body>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        Choose size: <br>
+        <select name="size">
+            <option value="Personal">Personal</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xl">Extra Large</option>
+        </select>
+            <br>
+            <br>
+        Choose your crust: <br>
+        <select name="crust">
+            <option value="thin">Thin crust</option>
+            <option value="handtossed">Hand Tossed</option>
+            <option value="thick">Deep dish</option>
+        </select>
+            <br>
+            <br>
+        <fieldset>
+            <legend>Choose your toppings:</legend>
+                <label for="Pepperoni">
+                    <input type="checkbox" id="Pepperoni" name="topping" value="Pepperoni"> Pepperoni <br>
+                </label>
+                <label for="Sausage">
+                    <input type="checkbox" id="Sausage" name="topping" value="Sausage"> Sausage <br>
+                </label>
+                <label for="Pineapple">
+                    <input type="checkbox" id="Pineapple" name="topping" value="Pineapple"> Pineapple <br>
+                </label>
+                <label for="Mushrooms">
+                    <input type="checkbox" id="Mushrooms" name="topping" value="Mushrooms"> Mushrooms <br>
+                </label>
+        </fieldset>
+            <br>
+        <fieldset>
+            <Legend>How did you hear about Spankey's Online Pizza Cafe?</Legend>
+                <label for="internet">
+                    <input type="radio" id="internet" name="advertise source" value="Internet"> Internet <br>
+                </label>
+                <label for="TV">
+                    <input type="radio" id="TV" name="advertise source" value="TV"> Television <br>
+                </label>
+                <label for="Radio">
+                    <input type="radio" id="Radio" name="advertise source" value="Radio"> Radio<br>
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="advertise source" value="Other"> Other <br>
+                </label>
+        </fieldset>
+             <br>
+        <div>
+            <textarea name="comments" rows="5" cols="50" placeholder="Comments? Questions? Special Instructions? Write them here:"></textarea>
+        </div>
+            <br>
+        <button style="height:30px;width:75px">Submit Order</button>
+            <br>
+            <br>
+        <div>
+            Create a Spankey's Pizza account to receive exclusive promotional deals!
+            <br>
+                <input type="email" placeholder="Enter Email"><br>
+                <input type="password" placeholder="Create a password"<br>
+            <br>
+                <button>Create Account</button>
+        </div>
+            <br>
+            <br>
+
+    </form>
 
 </body>
 </html>
