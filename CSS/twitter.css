@@ -87,14 +87,14 @@ a {
     width: calc(25% - 1em);
     float: left;
     margin: 0 .5em;
-    color: #black;
 }
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px; color: var(--separator-color);
+    border: 1px solid; border-color: var(--separator-color);
     padding: .5em;
     overflow: auto;
+
 }
 .media-image {
     max-width: 50px;
@@ -104,7 +104,6 @@ a {
 .media-body {
     width: calc(100% - 50px);
     color: black;
-    border-bottom-style: solid; border-color: lightgrey; padding: .5em; border-width: 1px;
     float: left;
 
 }
