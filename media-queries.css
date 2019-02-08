@@ -1,0 +1,153 @@
+body {
+    max-width: 375px;
+
+}
+
+.alert-info {
+    border-style: solid;
+    color: rgb(207,207,207);
+    background-color: rgb(203,253,253);
+    width: 337px;
+    margin: 17.5px;
+    text-align: center;
+    padding: .5em;
+    position: relative;
+    right: 19px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    margin: 17.5px;
+    width: 339px;
+    text-decoration: underline;
+    text-align: center;
+    padding: .5em .5em .5em .5em;
+    background-color: rgb(204,204,204);
+    list-style: none;
+
+}
+.nav-links {
+    /*position: relative;*/
+    /*right: 56px;*/
+    margin-right: auto; margin-left: auto;
+}
+nav {
+    line-height: 50px;
+}
+img {
+    display: block;
+    max-width: 350px;
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+h1 {
+    /*width: 350px;*/
+    text-align: center;
+}
+
+.main {
+    /*width: 350px;*/
+    /*margin-bottom: 2.5em;*/
+}
+
+.sub-section {
+    /*width: 350px;*/
+    font-style: italic;
+    /*margin-bottom: 3.5em;*/
+}
+footer {
+    /*float: left;*/
+}
+
+#social-media-links {
+
+}
+.icon {
+    display: inline;
+    float: right;
+}
+
+.icon img {
+    height: 40px;
+    width: 40px;
+}
+
+/* DESKTOP VIEW */
+
+@media screen and (min-width: 500px) {
+    .nav-links {
+        float: right;
+        display: inline-block;
+    }
+    body {
+        max-width: 100%;
+    }
+
+
+    li {
+        display: inline;
+        list-style: none;
+        padding: 1em;
+        margin: 0;
+        width: 100%;
+        text-decoration: underline;
+        text-align: center;
+        background-color: white;
+
+    }
+    .alert-info {
+        display: none;
+    }
+    h1 {
+        /*float: left;*/
+        display: inline-block;
+        /*line-height: ;*/
+        float: left;
+    }
+    nav {
+        /*float: right;*/
+        /*margin-bottom: 2em;*/
+    }
+    .main {
+        /*width: calc(60% - 1em);*/
+        float: left;
+        display: inline-block;
+        margin: .5em;
+    }
+    .sub-section {
+        /*width: calc(35% - 1em);*/
+        float: right;
+        display: inline-block;
+        margin: 1em;
+    }
+    footer {
+        display: inline-block;
+        /*float: left;*/
+        clear: both;
+    }
+    img {
+        display: block;
+        max-width: 90%;
+        width: auto;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        clear: both;
+    }
+
+    #social-media-links {
+        float: right;
+    }
+    .icon {
+        display: inline-block;
+        float: right;
+        height: 50px;
+        width: 50px;
+    }
+
+}

@@ -1,0 +1,29 @@
+.form-position {
+    margin-right: 50%;
+}
+div.jumbotron {
+
+    background-image: url("../Images/pizza.png");
+
+
+}
+#jumbo {
+    /*width: 140%;*/
+    text-align: center;
+    background-color: white;
+    opacity: .5;
+    /*margin-left: -20%;*/
+    overflow: hidden;
+
+}
+.badge {
+    margin-right: .5em;
+    background-color: darkgray;
+    color: white;
+}
+.card-header {
+    background-color: dodgerblue;
+}
+#list-head {
+    background-color: lightgrey;
+}

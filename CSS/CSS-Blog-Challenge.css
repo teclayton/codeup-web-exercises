@@ -13,11 +13,38 @@ body {
     margin: -.5em;
 
 }
+main {
+    width: 100%;
+}
+.blog-content {
+    position: absolute;
+    top: 20%;
+
+}
+.pop-section {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+}
 .blog-entry {
     box-shadow: lightslategray 3px 5px 5px 5px;
     padding: .5em;
     overflow: auto;
     margin: 2em;
+    width: 50%;
+    background-color: white;
+
+}
+.my-name {
+    box-shadow: lightslategray 3px 5px 5px 5px;
+    padding: .5em;
+    margin: 2em;
+    display: inline-block;
+    width: 30%;
+    float: right;
+    position: absolute;
+    top: 20%;
+    left: 80%;
 
 }
 .entry-heading {
@@ -47,9 +74,17 @@ body {
 .entry-footer {
     
 }
-.my-name {
-    box-shadow: lightslategray 3px 5px 5px 5px;
-    padding: .5em;
-    margin: 2em;
+.pop-image {
+    width: 30px;
+    height: 30px;
+    float: left;
+    display: inline-block;
+}
+.aside-header {
+    background-color: rgb(241,241,241);
+}
+.pop-post p {
     float: right;
+    font-weight: bold;
+    display: inline-block;
 }

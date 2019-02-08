@@ -1,0 +1,33 @@
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+h3 {
+    color: darkcyan;
+    text-decoration: underline;
+}
+body {
+    background-color: aliceblue;
+    background-image: url(../Images/future_background.jpg);
+    font-family: "Helvetica Neue";
+}
+li {
+    list-style-type: square;
+}
+td {
+    padding: 10px;
+    font-size: .9em;
+}
+a:link {
+    color:blue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: aqua;
+}
+a:active {
+    color:yellow;
+}
