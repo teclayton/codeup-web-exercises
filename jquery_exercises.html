@@ -5,12 +5,29 @@
     <title>jQuery Stuff</title>
 </head>
 <body>
+<h1 id="main-heading" class="codeup">Main Heading</h1>
+<p id="main-para" class="codeup">Here's some stuff under the heading.</p>
+<div id="list-div">
+    <ul id="list">
+        <li class="list-items">List item one!</li>
+        <li class="list-items">Second list item.</li>
+        <li class="list-items">Third and final list item</li>
+    </ul>
+</div>
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>$(document).ready(function() {
-    alert('Document has finished loading')
-});
+<script>
+   $('h1, p, li').css('background-color', 'yellow');
+
+   $('li').css('font-size', '20px');
+
+   var content = $('h1').html();
+   alert(content);
+
 </script>
 </body>
 </html>
