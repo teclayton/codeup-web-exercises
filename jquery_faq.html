@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="CSS/faq.css">
+<body>
+<dl>
+    <dt>Where can I find a park map?</dt>
+    <br>
+    <dd class="invisible def">You can view maps on specific park websites or download maps from the Harpers Ferry Center map collection.</dd>
+    <br>
+    <dt>Can I bring my pet to a national park?</dt>'
+    <br>
+    <dd class="invisible def">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities. Learn more about pets in parks.</dd>
+    <br>
+    <dt>What do I need to know about driving off road in national parks?</dt>
+    <br>
+    <dd class="invisible def">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+    <br>
+    <dt>How do I apply for a job with the National Park Service?</dt>
+    <br>
+    <dd class="invisible def">National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs. Learn more about working for us, including opportunities for students and volunteers and tips for applying for jobs.</dd>
+    <br>
+    <dt>How do I find out about contracting opportunities?</dt>
+    <br>
+    <dd class="invisible def">Opportunities to contract with the National Park Service are posted to FedBizOpps.gov, the federal government’s electronic business portal.</dd>
+    <br>
+    <dt>How do I reserve a tour in a park?</dt>
+    <br>
+    <dd class="invisible def">You can book some park tours through Recreation.gov such as WWII Valor in the Pacific (Pearl Harbor), many Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks participate in this reservation service. For more information on tours offered at a specific park, please see the park search.</dd>
+    <br>
+    <dt>How many people visit the national parks?</dt>
+    <br>
+    <dd class="invisible def">Total recreation visitors to the national parks in 2017: 330,882,751</dd>
+    <br>
+    <dt>How many employees are in the National Park Service?</dt>
+    <br>
+    <dd class="invisible def">Permanent, temporary, and seasonal employees: More than 20,000<br>
+            Volunteers: More than 315,000 in 2017</dd>
+    <br>
+    <dt>What government agency oversees the National Park Service?</dt>
+    <br>
+    <dd class="invisible def">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+</dl>
+<a href='#' id="btn">Click for Answers</a>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $('#btn').click(function(event) {
+        event.preventDefault();
+        $('dd').toggleClass('invisible');
+    });
+</script>
+</body>
+</html>
