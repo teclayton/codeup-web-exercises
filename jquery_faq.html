@@ -5,7 +5,19 @@
     <title>Title</title>
 </head>
 <link rel="stylesheet" href="CSS/faq.css">
+<style>
+
+
+
+</style>
 <body>
+<div>
+    <h1>Would you like to sign up for our newsletter?<span id="hide" style="font-size: 20px">x</span></h1>
+
+</div>
+
+<h2>Please register for the site</h2>
+
 <dl>
     <dt>Where can I find a park map?</dt>
     <br>
@@ -49,7 +61,7 @@
 <!--State facts-->
 
 <h3>Enchanted Rock</h3>
-<ul >
+<ul>
     <li>Humans have camped in this area for 12,000 years.</li>
     <li>The Spaniards first explored Central Texas in the 1700s. They mounted raids against the Lipan Apache and attempted to colonize this area. They established a mission and presidio on the San Saba River in the mid-1700s, and tried to establish a silver mine on Honey Creek near the Llano River.</li>
     <li>Germans and Americans arrived by the mid-1800s, drawn by dreams of having land of their own and tales of gold and silver.</li>
@@ -105,6 +117,22 @@
         $(this).parent().children().first().css('color', 'blue')
     });
 
+//Hide newsletter h1
+    $('#hide').click(function(){
+        $('#hide').parent().hide();
+    });
+
+//Show hidden ul
+
+    $('ul').hide();
+
+    $('h3').click(function(){
+        $(this).next().slideToggle()
+    });
+
+//h2 registration fade in
+
+    $('h2').hide().delay(8000).fadeIn()
 
 </script>
 </body>
