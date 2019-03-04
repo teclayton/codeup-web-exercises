@@ -45,12 +45,67 @@
     <dd class="invisible def">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
 </dl>
 <a href='#' id="btn">Click for Answers</a>
+
+<!--State facts-->
+
+<h3>Enchanted Rock</h3>
+<ul >
+    <li>Humans have camped in this area for 12,000 years.</li>
+    <li>The Spaniards first explored Central Texas in the 1700s. They mounted raids against the Lipan Apache and attempted to colonize this area. They established a mission and presidio on the San Saba River in the mid-1700s, and tried to establish a silver mine on Honey Creek near the Llano River.</li>
+    <li>Germans and Americans arrived by the mid-1800s, drawn by dreams of having land of their own and tales of gold and silver.</li>
+    <li>More than 400 archeological sites have been found in the park. All are protected, and 120 of them are designated State Archeological Landmarks.</li>
+</ul>
+
+<h3>Yellowstone</h3>
+<ul>
+    <li>Yellowstone National Park was established on March 1, 1872.</li>
+    <li>Yellowstone is the world’s first national park.</li>
+    <li>96% in Wyoming, 3% in Montana, 1% in Idaho</li>
+    <li>The park sits on top of an active volcano.</li>
+</ul>
+
+<h3>Yosemite</h3>
+<ul>
+    <li>The park is located in the Sierra Nevada Mountains.</li>
+    <li>20% of California's 7,000 plant species are found within Yosemite.</li>
+    <li>The seed of a sequoias is only the size of a piece of oatmeal.</li>
+    <li>The mountains located in Yosemite still grow about one foot every 1,000 years.</li>
+</ul>
+
+<button type="button" id="hl-btn">Highlight!</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
+
+//Toggle visibility
+
     $('#btn').click(function(event) {
         event.preventDefault();
         $('dd').toggleClass('invisible');
     });
+
+//highlight last list item
+
+    $('#hl-btn').click(function(event){
+        event.preventDefault();
+        $('ul').each(function(index, element){
+            $(element).children().last().css('background-color', '#FF0');
+        });
+    });
+
+//Bold text on H3 click
+
+    $('h3').click(function(){
+        $(this).next().css('font-weight', 'bold')
+    });
+
+//Blue text on Li parent elements
+
+    $('li').click(function(){
+        $(this).parent().children().first().css('color', 'blue')
+    });
+
+
 </script>
 </body>
 </html>
