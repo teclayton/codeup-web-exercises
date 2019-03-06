@@ -1,0 +1,91 @@
+[
+  {
+  "employeeNumber": 1,
+  "firstName": "Jane",
+  "lastName": "Janeway",
+  "sales": 3
+
+    
+  },
+
+  {
+    "employeeNumber": 3,
+    "firstName": "Tricia",
+    "lastName": "Triciason",
+    "sales": 5
+
+
+  },
+  {
+    "employeeNumber": 4,
+    "firstName": "Jeannette",
+    "lastName": "Jeanson",
+    "sales": 4
+
+
+  },
+  {
+    "employeeNumber": 5,
+    "firstName": "Charles Emmerson",
+    "lastName": "Winchester III",
+    "sales": 2
+
+
+  },
+  {
+    "employeeNumber": 6,
+    "firstName": "Chet",
+    "lastName": "Chedderson",
+    "sales": 8
+
+
+  },
+  {
+    "employeeNumber": 7,
+    "firstName": "Chaiam",
+    "lastName": "Chaiamson",
+    "sales": 12
+
+
+  },
+  {
+    "employeeNumber": 8,
+    "firstName": "Dale",
+    "lastName": "Dalesinger",
+    "sales": 1
+
+
+  },
+  {
+    "employeeNumber": 9,
+    "firstName": "Zig",
+    "lastName": "Ziglar",
+    "sales": 50
+
+
+  },
+  {
+    "employeeNumber": 10,
+    "firstName": "Henry",
+    "lastName": "Kissinger",
+    "sales": 1
+
+
+  },
+  {
+    "employeeNumber": 11,
+    "firstName": "Arthur Herbert",
+    "lastName": "Fonzarelli",
+    "sales": 23
+
+
+  },
+  {
+    "employeeNumber": 12,
+    "firstName": "Betty",
+    "lastName": "Boop",
+    "sales": 67
+
+
+
+}]
