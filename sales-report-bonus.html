@@ -3,8 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
+<div class="row">
+    <div class="col-6">
+        <table id="myTable" class="table">
+            <thead class="thead-light">
+            <tr>
+                <th>Units sold</th>
+                <th>Name</th>
+                <th>Employee ID#</th>
+            </tr>
+            </thead>
+            <tbody id="salespeople">
 
+            </tbody>
+        </table>
+        <button id='btn-sort' class="btn btn-success">Sort by Sales</button>
+    </div>
+    <div class="col-6">
+        <table id="totals" class="table">
+            <thead class="thead-light">
+            <tr>
+                <th>Total Salespeople</th>
+                <th>Total Sales</th>
+                <th>Average Sales</th>
+            </tr>
+            </thead>
+            <tbody id="total-output">
+                <tr>
+                    <td id="employee-total"></td>
+                    <td id="sales-total"></td>
+                    <td id="average-sales"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    //Variable for JSON file
+    var reportContents = $.get('data/sales-report.json');
+
+    //Populates table with sales data
+    reportContents.done(function(salesperson) {
+        var table = '';
+        for (var i = 0; i < salesperson.length; i += 1) {
+            table += '<tr>';
+            table += '<td>' + salesperson[i].sales + '</td>';
+            table += '<td>' + salesperson[i].lastName + ', ' + salesperson[i].firstName + '</td>';
+            table += '<td>' + salesperson[i].employeeNumber + '</td>';
+            table += '</tr>';
+        }
+        $('#salespeople').html(table);
+
+
+        //Two functions for determining total employees and total sales
+        function totalSales(){
+            var sales = 0;
+            for (var i = 0; i < salesperson.length; i += 1){
+                sales += salesperson[i].sales;
+            }
+            return sales;
+        }
+
+        function averageSales(){
+            return totalSales()/salesperson.length;
+        }
+
+        //Populates table for total employee, total sales, and average sales
+        $('#employee-total').html(salesperson.length);
+        $('#sales-total').html(totalSales);
+        $('#average-sales').html(averageSales);
+
+
+        // Table Sorting function, sort by number
+        function sortTable() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("myTable");
+            switching = true;
+            /* Make a loop that will continue until
+            no switching has been done: */
+            while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                    // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* Get the two elements you want to compare,
+                    one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("TD")[0];
+                    y = rows[i + 1].getElementsByTagName("TD")[0];
+                    // Check if the two rows should switch place:
+                    if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                        // If so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+
+        // Button to run table sort function
+
+        $('#btn-sort').click(sortTable);
+    })
+
+
+
+
+
+
+</script>
 </body>
 </html>
+
+<!--### Sales Report Parsing-->
+
+<!--Using the following JS:-->
+
+
+<!--var reportContents = "Monthly Sales Report-->
+
+<!--Date: 03-17-2015-->
+
+<!--Office: Codeup-->
+
+<!--===================================================-->
+<!--Employee Number, First Name, Last Name, Sales Units-->
+<!--***************************************************-->
+
+<!--n1,Jane,Janeway, 3\-->
+<!--n3, Tricia, Triciason, 5\-->
+<!--n4, Jeannette, Jeanson, 4\-->
+<!--n5, Charles Emmerson III, Winchester, 2\-->
+<!--n6, Chet, Chedderson, 8\-->
+<!--n7, Chaiam, Chaiamson, 12\-->
+<!--n8, Dale, Dalesinger, 1\-->
+<!--n9, Zig, Ziglar, 50\-->
+<!--n10, Henry, Kissinger, 1\-->
+<!--n11, Arthur Herbert, Fonzarelli, 23\-->
+<!--n12, Betty, Boop, 67";-->
+
+
+<!--format an output to display the following:-->
+
+<!-- - total number of employees-->
+<!-- - total number of units sold-->
+<!-- - avg units sold per employee-->
+
+<!--The output should share employee production, ordered from highest to lowest # of units and should have the following formatting:-->
+
+<!--```-->
+<!--* Units   |     Full Name       |   Employee Number-->
+<!--* 5             Bob Boberson        2-->
