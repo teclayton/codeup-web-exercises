@@ -48,13 +48,13 @@
 
 
 // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
-
-function isShortWord(string) {
-    return string.length < 5;
-}
-
-console.log(isShortWord('sssssssssssssss'));
-console.log(isShortWord('sho'));
+//
+// function isShortWord(string) {
+//     return string.length < 5;
+// }
+//
+// console.log(isShortWord('sssssssssssssss'));
+// console.log(isShortWord('sho'));
 
 // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
 
@@ -93,28 +93,68 @@ console.log(isShortWord('sho'));
 //
 // scopeExample();
 
-var x = 300;
-var y = 100;
+// var x = 300;
+// var y = 100;
+//
+// function scopeExample2(x, y) {
+//     var x = 1;
+//     var y = 2;
+//     console.log('x: ' + x + ' y: ' + y);
+//     return x+y;
+// }
+// scopeExample2();
+// console.log('x: ' + x + ' y: ' + y);
+//
+// //FUNCTION WITH SIDE EFFECTS:
+//
+// var word = "hello";
+//
+// function shoutWord() {
+//     return word.toUpperCase();
+// }
+//
+// //IIFE Immediately invoked function expression
+//
+// (function () { // this goes at the beginning of the script
 
-function scopeExample2(x, y) {
-    var x = 1;
-    var y = 2;
-    console.log('x: ' + x + ' y: ' + y);
-    return x+y;
+// })(); // this goes at the very bottom. prevents functions from being overwritten
+
+
+// for (x = 0; x<= 50; x += 2) {
+//     console.log(x);
+// }
+//
+// function squares(x) {
+//     return x * x;
+// }
+//
+// var x = 1;
+// while(x <=10) {
+//     console.log('The square of ' + x + ' is ' + squares(x));
+//     x++;
+// }
+// var count = 1;
+// do {
+//     console.log('The number is ' + count);
+//     count++;
+// } while(count <= 25);
+//
+// var start = 100;
+//
+// //
+//
+// do {
+//     console.log(start);
+//     start -= 10;
+// }while(start >= -50);
+
+for (var i = 1; i <= 100; i++) {
+    if (i % 15 === 0)
+        console.log('FizzBuzz');
+    else if (i % 3 === 0)
+        console.log('Fizz');
+    else if (i % 5 === 0)
+        console.log('Buzz');
+    else
+        console.log(i);
 }
-scopeExample2();
-console.log('x: ' + x + ' y: ' + y);
-
-//FUNCTION WITH SIDE EFFECTS:
-
-var word = "hello";
-
-function shoutWord() {
-    return word.toUpperCase();
-}
-
-//IIFE Immediately invoked function expression
-
-(function () { // this goes at the beginning of the script
-
-})(); // this goes at the very bottom. prevents functions from being overwritten

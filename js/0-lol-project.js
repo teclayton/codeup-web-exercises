@@ -1,0 +1,3 @@
+$('#flash-timer').click(function(){
+
+});
