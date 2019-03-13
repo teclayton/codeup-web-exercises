@@ -6,5 +6,61 @@
 </head>
 <body>
 
+
+<script>
+"use strict";
+
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+    const newNumbers = numbers.map(function(n){
+        return n+1;
+    });
+    // console.log(newNumbers);
+
+    const mapNumbers = numbers.map(function(n){
+        return n + numbers.indexOf(n);
+    });
+    // console.log(mapNumbers);
+
+    const oddNumbers = numbers.filter(function(n){
+        return n % 2 !== 0;
+    });
+    // console.log(oddNumbers)
+
+    const binary = [1,0,1,1,0,0,0,1,0,1,1,1,1,0,0,1];
+    const zeroes = binary.filter(function(n){
+        return n == false;
+    });
+
+    const ones = binary.filter(function(n){
+        return n == true;
+    });
+    // console.log(zeroes);
+    // console.log(ones);
+
+    const reduceNumbers = [12,3,5,13,7,1,2,15];
+    const sum = reduceNumbers.reduce((total, currentNumber) => total+ currentNumber, 2);
+    // console.log(sum);
+
+    const colors = ['red', 'orange', 'red', 'blue', 'blue', 'green', 'red'];
+
+    function countColors(array){
+        const colorCountObject = array.reduce((totalColors, color) => {
+            if (typeof totalColors[color] === 'undefined') {
+                totalColors[color] = 1;
+            } else {
+                totalColors[color] += 1
+            }
+            return totalColors;
+        }, {});
+            return colorCountObject;
+    }
+    // console.log(countColors(colors))
+
+    const lyrics = ['we', 'all', 'live', 'in', 'a', 'yellow', 'submarine'];
+    const oneLine = lyrics.reduce((previous, current) => ` ${previous} ${current}`);
+    // console.log(oneLine);
+</script>
+<script src ='js/map-filter-reduce.js'></script>
 </body>
 </html>

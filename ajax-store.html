@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Online Store</title>
 </head>
 <body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts">
+
+    </tbody>
+
+    <button class="btn" id="update-btn">Update Items</button>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        "use strict";
+
+        // TODO: Create an ajax GET request for /data/inventory.json
+
+        var response = $.get("data/inventory.json");
+
+
+        // TODO: Take the data from inventory.json and append it to the products table
+
+        response.done(function(items){
+
+            // for (var i = 0; i < items.length; i += 1) {
+            //     for (var j = 0; j < items[i].categories.length; j += 1) {
+            //         console.log('Item: ' + items[i].title + ' Category: ' + items[i].categories[j])
+            //     }
+            // }
+
+            // items.forEach(function(item){
+            //     item.categories.forEach(function(category){
+            //         console.log('Item: ' + item.title + ' Category: ' + category)
+            //     })
+            // })
+            //
+
+            var html = '';
+
+        for (var i = 0; i < items.length; i +=1) {
+            html += '<tr>';
+            html += '<td>' + items[i].title + '</td>';
+            html += '<td>' + items[i].quantity + '</td>';
+            html += '<td>' + items[i].price + '</td>';
+            html += '<td>' + items[i].categories.join(', ') + '</td>';
+            html += '</tr>';
+        }
+            $('#insertProducts').html(html);
+            console.log(items[1])
+
+        });
+
+        $('#update-btn').click(function(){
+
+            $('#insertProducts').html(html)
+        });
+
+
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+    })();
+</script>
 
 </body>
 </html>
